@@ -1,0 +1,1084 @@
+/* General Reset for Body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  box-sizing: border-box;
+  background-color: #1a0f0f;
+  color: #fff;
+}
+
+/* Header Styling */
+header {
+  background-color: #1a0f0f; /* Match the dark black-red background of the webpage */
+  position: fixed; /* Keep the header fixed at the top */
+  width: 100%;
+  z-index: 1000; /* Ensure it stays above other content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+  padding: 1rem 2rem; /* Ensure consistent spacing for all pages */
+}
+
+/* Header Container */
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Space between the logo and navigation links */
+  align-items: center; /* Align items vertically in the center */
+}
+
+/* Logo Styling */
+.logo {
+  height: 60px; /* Ensure consistent logo size */
+  width: auto;
+  margin-right: 1rem; /* Add spacing between the logo and the links */
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* Add space between links */
+  margin: 0 auto; /* Center the navigation links */
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0; /* Remove extra margin */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff; /* White text for contrast */
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 0; /* Remove the red box padding */
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #e53935; /* Red text on hover */
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between text and monitor */
+  padding: 2rem;
+  height: 100vh; /* Full viewport height */
+  margin-top: 0; /* Ensure it starts at the top */
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative; /* Enable positioning adjustments */
+  left: 100px; /* Move the section 100px (approx. 1 inch) to the right */
+  margin-right: 1rem; /* Reduce the space between the text and the monitor */
+  max-width: 600px; /* Increase the width of the container */
+  width: 100%; /* Ensure it adapts to the viewport */
+}
+
+.hero-content h1 {
+  font-size: 3rem; /* Larger font size for "Hi, My name is Sam" */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Dynamic Text Styling */
+.dynamic-text {
+  font-size: 1.5rem; /* Adjust font size for readability */
+  margin-bottom: 1.5rem;
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: visible; /* Allow full text to display */
+  text-overflow: unset; /* Remove ellipsis */
+  max-width: 100%; /* Ensure it uses the full width of the container */
+  line-height: 1.2; /* Adjust line height for proper vertical alignment */
+}
+
+.dynamic-text #changing-words {
+  font-weight: bold;
+  color: #e53935; /* Red color for the changing words */
+  display: inline-block;
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Hide overflowing text */
+  vertical-align: middle; /* Align the text vertically with the cursor */
+}
+
+/* Blinking Cursor */
+.cursor {
+  display: inline-block;
+  width: 2px; /* Narrower width for a more realistic cursor */
+  height: 1.2em; /* Match the height of the text */
+  background-color: currentColor; /* Match the text color */
+  vertical-align: middle; /* Align with the middle of the text */
+  animation: blink 0.8s steps(1, start) infinite; /* Smooth blinking animation */
+  border-radius: 1px; /* Slight rounding for a softer appearance */
+}
+
+/* Blinking Animation */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1; /* Cursor is visible */
+  }
+  50% {
+    opacity: 0; /* Cursor is hidden */
+  }
+}
+
+/* Fade Animation */
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+/* Highlight Styling for "Sam" */
+.highlight {
+  color: #e53935; /* Red color */
+  font-weight: bold;
+}
+
+/* Social Buttons */
+.social-buttons {
+  display: flex;
+  gap: 1rem; /* Space between buttons */
+  margin-top: 1rem;
+}
+
+.social-buttons img {
+  width: 32px; /* Icon size */
+  height: 32px;
+}
+
+.social-buttons .btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-buttons .btn:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  opacity: 0.8; /* Slight transparency on hover */
+}
+
+/* YouTube Button */
+.social-buttons .btn.youtube {
+  background-color: #ff0000; /* YouTube red */
+}
+
+/* LinkedIn Button */
+.social-buttons .btn.linkedin {
+  background-color: #0077b5; /* LinkedIn blue */
+}
+
+/* GitHub Button */
+.social-buttons .btn.github {
+  background-color: #333; /* GitHub dark gray */
+}
+
+/* Resume Button Styling */
+.social-buttons .btn.resume {
+  background-color: #e53935; /* Red background */
+  color: #fff; /* White text */
+  border: none; /* Remove border */
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-buttons .btn.resume:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* General Section Styling */
+section {
+  padding: 5rem 2rem;
+}
+
+/* About Section */
+#about {
+  background-color: #1a0f0f; /* Super dark red background */
+  color: #fff; /* White text for contrast */
+  padding: 5rem 2rem;
+}
+
+#about h2 {
+  text-align: left; /* Align the heading to the left */
+  font-size: 2rem;
+  margin-bottom: 1.5rem; /* Adjust spacing below the heading */
+  color: #fff; /* Ensure the heading color matches the text */
+}
+
+.about-container {
+  display: flex; /* Use Flexbox to align items horizontally */
+  flex-wrap: nowrap; /* Prevent wrapping so the text and box stay side by side */
+  justify-content: space-between; /* Add space between the text and the box */
+  align-items: flex-start;
+  gap: 3rem; /* Increase spacing between the text and the box */
+  max-width: 1500px; /* Increase the total width of the section */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.about-text {
+  flex: 2; /* Allow the text to take up more space */
+  font-size: 1.3rem; /* Slightly larger font size */
+  line-height: 1.9; /* Adjusted line height for readability */
+  color: #fff;
+  text-align: justify; /* Ensure text is readable */
+  margin-right: 1.5rem; /* Add space between the text and the box */
+}
+
+.about-navigation {
+  flex: 1.8; /* Make the box take up more space */
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Add more rounding for a modern look */
+  padding: 3rem 2rem 2rem; /* Keep consistent padding */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  max-width: 700px; /* Increase the width of the box */
+  position: relative; /* Enable positioning for the tabs */
+  transform: translateX(30px); /* Move the box further to the right */
+  margin-top: 7rem; /* Add margin to move the box down the page */
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: space-between; /* Spread tabs evenly */
+  margin: 0; /* Remove extra margin */
+  padding: 0; /* Remove padding around the tabs */
+  background: transparent; /* Keep the background transparent */
+  border-radius: 0; /* Remove rounded corners from the container */
+  position: relative; /* Keep tabs positioned properly */
+  top: 0; /* Align tabs to the top of the box */
+  left: 0;
+  width: 100%; /* Make tabs span the full width of the box */
+  z-index: 1; /* Ensure tabs are above the content */
+}
+
+.nav-tabs .tab {
+  flex: 1;
+  padding: 0.75rem; /* Add padding for larger tabs */
+  background: #e53935; /* Red background for each tab */
+  color: #fff;
+  border: none; /* Remove the border */
+  border-radius: 0; /* Remove rounding for sharp edges */
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem; /* Keep font size consistent */
+  font-weight: bold; /* Make the text bold */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-tabs .tab:hover {
+  background: #d32f2f; /* Slightly darker red on hover */
+}
+
+.nav-tabs .tab.active {
+  background: #b71c1c; /* Darker red for the active tab */
+}
+
+/* Tab Pane Styling */
+.tab-pane {
+  display: none; /* Hide all tab panes by default */
+  opacity: 0; /* Ensure hidden panes are not visible */
+  transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+.tab-pane.active {
+  display: block; /* Show only the active tab pane */
+  opacity: 1; /* Make the active pane fully visible */
+}
+
+.tab-content {
+  padding: 2rem; /* Keep consistent padding for the content area */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0 0 8px 8px; /* Match the box's rounded corners */
+  margin-top: 3rem; /* Add space below the tabs */
+}
+
+.tab-pane {
+  display: none; /* Hide all tab panes by default */
+  opacity: 0; /* Ensure hidden panes are not visible */
+  transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+.tab-pane.active {
+  display: block; /* Show only the active tab pane */
+  opacity: 1; /* Make the active pane fully visible */
+}
+
+/* Portfolio Section */
+#portfolio {
+  background-color: #1a0f0f; /* Super dark red background */
+  color: #fff; /* White text for contrast */
+  padding: 5rem 2rem;
+}
+
+#portfolio h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 5rem; /* Increased margin for spacing */
+  color: #fff;
+}
+
+/* Removed styles related to the video container if no longer needed */
+.video-container {
+  display: none; /* Hide the container since videos are removed */
+}
+
+/* Ensure enough space between Portfolio and Contact sections */
+#contact {
+  background-color: #f4f4f4; /* Light gray background */
+  color: #000; /* Dark text for contrast */
+  margin-top: 10rem; /* Reduce the space above the Contact section */
+  padding: 4rem 2rem; /* Keep padding for the Contact section */
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #1a0f0f; /* Super dark red background */
+  color: #fff; /* White text for contrast */
+  padding: 4rem 2rem;
+}
+
+.contact-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* Contact Section Container */
+.contact-container {
+  display: flex;
+  justify-content: space-between; /* Space between text and form */
+  align-items: flex-start; /* Align items at the top */
+  gap: 2rem; /* Add spacing between the text and form */
+}
+
+/* Contact Text */
+.contact-text {
+  flex: 1; /* Allow the text to take up equal space */
+  font-size: 1.2rem; /* Adjust font size for readability */
+  line-height: 1.8; /* Improve line spacing */
+}
+
+/* Contact Form */
+#contact-form {
+  flex: 1; /* Allow the form to take up equal space */
+  max-width: 600px; /* Limit the width of the form */
+  margin: 0; /* Remove default margin */
+  background: #2a1f1f; /* Darker background for the form */
+  padding: 2rem; /* Add padding inside the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  text-align: left; /* Align text and inputs to the left */
+}
+
+#contact-form input,
+#contact-form textarea {
+  font-family: Arial, sans-serif; /* Match the font with the rest of the site */
+  font-size: 1rem; /* Ensure consistent font size */
+  color: #fff; /* White text */
+  background-color: #333; /* Darker input background */
+  border: 1px solid #444; /* Darker border */
+  padding: 0.75rem;
+  border-radius: 4px;
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+/* Form Fields */
+#contact-form .form-group {
+  margin-bottom: 1.5rem; /* Add spacing between fields */
+}
+
+#contact-form label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#contact-form textarea {
+  resize: none; /* Disable resizing for the textarea */
+  height: 150px; /* Set a fixed height for the textarea */
+}
+
+/* Submit Button */
+#contact-form button[type="submit"] {
+  background-color: #e53935; /* Red background for the button */
+  color: #fff; /* White text */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 0; /* Remove rounded corners */
+  transition: background-color 0.3s ease;
+  width: 100%; /* Make the button span the full width of the form */
+}
+
+#contact-form button[type="submit"]:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Footer */
+footer {
+  background-color: #1a0f0f; /* Match the dark theme */
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* Fake Terminal Styling */
+.fake-terminal {
+  background-color: #1e1e1e; /* Dark terminal background */
+  color: #00ff00; /* Green text for terminal output */
+  border-radius: 10px;
+  padding: 1rem;
+  width: 600px; /* Increase the width */
+  height: 400px; /* Increase the height */
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin-left: 2rem; /* Space between terminal and hero content */
+  position: relative; /* Enable positioning adjustments */
+  top: -20px; /* Move the terminal content up by 1 inch */
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: #333;
+  border-radius: 10px 10px 0 0;
+}
+
+.terminal-header .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-header .dot.red {
+  background-color: #ff5f56;
+}
+
+.terminal-header .dot.yellow {
+  background-color: #ffbd2e;
+}
+
+.terminal-header .dot.green {
+  background-color: #27c93f;
+}
+
+/* Terminal Body */
+.terminal-body {
+  padding: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow-y: auto; /* Enable vertical scrolling for overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+  white-space: pre-wrap; /* Wrap text to fit within the container */
+  word-wrap: break-word; /* Break long words to prevent overflow */
+  overflow-wrap: break-word; /* Ensure proper wrapping for long words */
+  height: calc(100% - 2.5rem); /* Adjust height to leave space for the command line */
+  max-height: calc(100% - 2.5rem); /* Prevent content from exceeding the container height */
+  box-sizing: border-box; /* Include padding in height calculation */
+  scrollbar-width: thin; /* Use a thin scrollbar for better aesthetics */
+  scrollbar-color: #555 #1e1e1e; /* Customize scrollbar colors */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Ensure text starts at the top */
+}
+
+/* Command Line */
+.terminal-command-line {
+  background-color: #333; /* Unified background color */
+  color: #00ff00; /* Unified text color */
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border-top: 1px solid #555;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: absolute; /* Fix the command line at the bottom */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto; /* Center the command line */
+  max-width: 95%; /* Ensure it does not stretch too far */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.terminal-command-line span {
+  color: #00ff00; /* Unified green text for the command prompt */
+}
+
+.terminal-command-line input {
+  background: transparent;
+  border: none;
+  color: #00ff00; /* Unified green text for input */
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  outline: none;
+  flex: 1;
+}
+
+#terminal-output {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Desktop Environment */
+#desktop-environment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Ensure we can use left/right positioning */
+  left: -60px; /* Move the monitor 2 inches (approx.) to the left */
+}
+
+/* Monitor */
+.monitor {
+  width: 800px; /* Monitor width */
+  height: 500px; /* Monitor height */
+  background-color: #000;
+  border: 15px solid #333; /* Thicker border for a monitor frame */
+  border-radius: 5px; /* Slightly rounded corners */
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Screen */
+.screen {
+  width: 100%;
+  height: 100%;
+  background-color: #1a0f0f; /* Dark screen background */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Monitor Stand */
+.monitor::after {
+  content: '';
+  width: 150px;
+  height: 20px;
+  background-color: #333;
+  position: absolute;
+  bottom: -30px; /* Position the stand below the monitor */
+  left: calc(50% - 75px); /* Center the stand */
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.monitor::before {
+  content: '';
+  width: 100px;
+  height: 10px;
+  background-color: #444;
+  position: absolute;
+  bottom: -50px; /* Position the base below the stand */
+  left: calc(50% - 50px); /* Center the base */
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Windows */
+.window {
+  width: 90%; /* Fit the applications within the monitor */
+  height: 90%; /* Fit the applications within the monitor */
+  background-color: #1e1e1e;
+  border-radius: 5px;
+  position: absolute;
+  top: 5%; /* Center vertically */
+  left: 5%; /* Center horizontally */
+  display: none; /* Hide all windows by default */
+}
+
+.window.active {
+  display: block; /* Show the active window */
+}
+
+.window-header {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #333;
+  border-radius: 5px 5px 0 0;
+}
+
+.window-header .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.window-header .dot.red {
+  background-color: #ff5f56;
+}
+
+.window-header .dot.yellow {
+  background-color: #ffbd2e;
+}
+
+.window-header .dot.green {
+  background-color: #27c93f;
+}
+
+.window-title {
+  font-size: 0.9rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Window Body */
+.window-body {
+  padding: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  overflow-y: auto; /* Enable vertical scrolling for overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+  white-space: pre-wrap; /* Wrap text to fit within the container */
+  word-wrap: break-word; /* Break long words to prevent overflow */
+  overflow-wrap: break-word; /* Ensure proper wrapping for long words */
+  height: 100%; /* Ensure it fills the terminal window */
+  max-height: 100%; /* Prevent content from exceeding the container height */
+  box-sizing: border-box; /* Include padding in height calculation */
+  scrollbar-width: thin; /* Use a thin scrollbar for better aesthetics */
+  scrollbar-color: #555 #1e1e1e; /* Customize scrollbar colors */
+}
+
+/* Custom Scrollbar Styling for Webkit Browsers */
+.window-body::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.window-body::-webkit-scrollbar-thumb {
+  background-color: #555; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners for the scrollbar thumb */
+}
+
+.window-body::-webkit-scrollbar-track {
+  background-color: #1e1e1e; /* Color of the scrollbar track */
+}
+
+/* Terminal Window */
+.terminal-window {
+  width: 90%; /* Ensure it fits within the monitor */
+  height: 80%; /* Reduce height to crop the bottom by about an inch */
+  position: absolute;
+  top: 10%; /* Adjust to center vertically after reducing height */
+  left: 5%; /* Center horizontally */
+  background-color: #1e1e1e;
+  border-radius: 5px;
+  display: none; /* Hide by default */
+}
+
+/* YouTube Window */
+.youtube-window {
+  bottom: 20px;
+  left: 20px;
+}
+
+.youtube-icon {
+  width: 100%;
+  height: auto;
+}
+
+/* PC */
+.pc {
+  width: 150px;
+  height: 50px;
+  background-color: #333;
+  border-radius: 5px;
+  margin-top: 1rem;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Certifications Bar */
+.certifications-bar {
+  background-color: #e53935; /* Red background */
+  padding: 1rem 0; /* Add padding for spacing */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  width: 100%; /* Make it span the full width of the page */
+  position: absolute; /* Position it at the bottom of the home section */
+  bottom: 0; /* Align it to the bottom */
+  left: 0; /* Align it to the left edge */
+}
+
+.certifications-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
+  gap: 1rem; /* Add spacing between logos */
+  justify-content: center; /* Center the logos */
+  align-items: center; /* Align logos vertically */
+}
+
+.cert-logo {
+  filter: brightness(0) invert(1); /* Make the images white */
+  background-color: transparent; /* Ensure no background color */
+  display: inline-block; /* Ensure proper alignment */
+  height: 40px; /* Adjust logo size */
+  width: auto; /* Maintain aspect ratio */
+  margin: 0 10px; /* Add spacing between logos */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Add hover effect */
+}
+
+.cert-logo:hover {
+  transform: scale(1.1); /* Slightly enlarge the logo on hover */
+  filter: brightness(0.8) invert(1); /* Slightly dim the white on hover */
+}
+
+/* Black Bars Above Sections */
+.black-bar {
+  background-color: #1a0f0f; /* Super dark red background */
+  height: 2rem; /* Adjust height as needed */
+  width: 100%; /* Full width */
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #1a0f0f; /* Super dark red background */
+  color: #fff; /* White text for contrast */
+  padding: 4rem 2rem; /* Maintain padding for spacing */
+}
+
+.contact-section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+#contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+button[type="submit"] {
+  background-color: #e53935;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #d32f2f;
+}
+
+/* Education List */
+.education-list {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.education-list li {
+  margin-bottom: 1.5rem; /* Add spacing between items */
+  line-height: 1.6; /* Improve readability */
+}
+
+.education-list hr {
+  border: none;
+  border-top: 1px solid #ccc; /* Add a light horizontal line */
+  margin: 1rem 0; /* Add spacing around the line */
+}
+
+/* Experience List */
+.experience-list {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.experience-list li {
+  margin-bottom: 1.5rem; /* Add spacing between items */
+  line-height: 1.6; /* Improve readability */
+}
+
+.experience-list hr {
+  border: none;
+  border-top: 1px solid #ccc; /* Add a light horizontal line */
+  margin: 1rem 0; /* Add spacing around the line */
+}
+
+/* Organizations List */
+.organizations-list {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.organizations-list li {
+  margin-bottom: 1.5rem; /* Add spacing between items */
+  line-height: 1.6; /* Improve readability */
+}
+
+.organizations-list hr {
+  border: none;
+  border-top: 1px solid #ccc; /* Add a light horizontal line */
+  margin: 1rem 0; /* Add spacing around the line */
+}
+
+/* Certifications List */
+.certifications-list {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  color: #fff; /* Ensure text is visible on dark background */
+}
+
+.certifications-list li {
+  margin-bottom: 1.5rem; /* Add spacing between items */
+  line-height: 1.6; /* Improve readability */
+}
+
+.certifications-list hr {
+  border: none;
+  border-top: 1px solid #ccc; /* Add a light horizontal line */
+  margin: 1rem 0; /* Add spacing around the line */
+}
+
+/* Research Columns */
+.research-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 6rem; /* Ensure spacing below the header */
+  padding: 0 2rem; /* Add padding to move columns away from screen edges */
+}
+
+.research-columns .column {
+  flex: 1;
+  max-width: 30%; /* Reduce column width slightly */
+  background-color: #2a1f1f;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.research-columns .column h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.research-columns .column p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Image Container for Research Columns */
+.image-container {
+  flex-shrink: 0; /* Prevent the image container from shrinking */
+  width: 150px; /* Fixed width for the image */
+  height: 150px; /* Fixed height for the image */
+  display: flex; /* Use Flexbox for alignment */
+  align-items: center; /* Center the image vertically */
+  justify-content: center; /* Center the image horizontally */
+}
+
+.image-container img {
+  width: 100%; /* Ensure the image fits the container */
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.image-container img[alt="Fire File Icon"] {
+  position: relative;
+  top: -20px; /* Move the icon up slightly */
+}
+
+/* Clickable Column */
+.clickable-column {
+  position: relative;
+}
+
+.clickable-column a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.clickable-column:hover {
+  background-color: #e53935; /* Red background on hover */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Research Link */
+.research-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align content */
+  }
+
+  .about-text {
+    flex: 1 1 auto; /* Allow flexible width */
+    margin: 0; /* Remove margins */
+    text-align: center; /* Center text for smaller screens */
+  }
+
+  .about-navigation {
+    flex: 1 1 auto; /* Allow flexible width */
+    max-width: 100%; /* Full width */
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .certifications-bar {
+    padding: 0.5rem 0; /* Reduce padding */
+  }
+}
+
+/* Button Container Styling */
+.button-container {
+  display: flex;
+  justify-content: space-around; /* Spread out buttons evenly */
+  gap: 0rem; /* Increase space between buttons */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  margin-top: 2rem;
+}
+
+/* Individual Button Item */
+.button-item {
+  position: relative;
+  width: 450px; /* Wider width for buttons */
+  height: 250px; /* Shorter height for buttons */
+  overflow: hidden;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.button-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the button area */
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.button-item:hover img {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Text Overlay Styling */
+.image-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-overlay .overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  padding: 1.5rem; /* Increased padding for better spacing */
+  border-radius: 8px;
+}
+
+.image-overlay .overlay-text h3 {
+  font-size: 2rem; /* Increased font size for heading */
+  margin-bottom: 0.75rem;
+}
+
+.image-overlay .overlay-text p {
+  font-size: 1.2rem; /* Increased font size for paragraph */
+}
+
+/* PDF Container Styling */
+.pdf-container {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 95%;
+  max-width: 1200px;
+  margin: 5rem auto; /* Center the container and add spacing */
+}
+
+/* PDF Viewer Styling */
+.pdf-viewer {
+  width: 100%;
+  height: 600px;
+  border: none;
+}
