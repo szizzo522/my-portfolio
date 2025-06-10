@@ -9,6 +9,11 @@ body {
   color: #fff;
 }
 
+/* Apply box-sizing border-box model to all elements */
+* {
+  box-sizing: border-box;
+}
+
 /* Header Styling */
 header {
   background-color: #1a0f0f; /* Match the dark black-red background of the webpage */
@@ -1081,4 +1086,8 @@ button[type="submit"]:hover {
   width: 100%;
   height: 600px;
   border: none;
+}
+
+.g-recaptcha {
+  margin-bottom: 20px; /* Adjust the value as needed */
 }

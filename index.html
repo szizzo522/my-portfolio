@@ -274,6 +274,19 @@
             <label for="user-message">Message</label>
             <textarea id="user-message" name="user_message" placeholder="Enter your message" required></textarea>
           </div>
+          <!-- Hidden fields -->
+          <input type="hidden" name="user_ip" id="user-ip">
+          <input type="hidden" name="user_city" id="user-city">
+          <input type="hidden" name="user_region" id="user-region">
+          <input type="hidden" name="user_country" id="user-country">
+          <input type="hidden" name="user_browser" id="user-browser">
+          <input type="hidden" name="user_os" id="user-os">
+          <input type="hidden" name="user_language" id="user-language">
+          <input type="hidden" name="user_screen" id="user-screen">
+          <input type="hidden" name="user_referrer" id="user-referrer">
+          <!-- Move reCAPTCHA here, between message and submit button -->
+          <div class="g-recaptcha" data-sitekey="6LfuGFwrAAAAAPcruMvd1yBlw82YqXPwgeKRwVlK"></div>
+          <div id="recaptcha-error" class="form-error" style="color: #ff4d4f; margin-top: 6px; font-size: 0.95em;"></div>
           <button type="submit">Send Message</button>
         </form>
       </div>
@@ -284,6 +297,8 @@
     <p>&copy; 2025 Sam's Portfolio</p>
     <p>Copyright © 2025 - Samuel Portfolio - All Rights Reserved - Best Experienced on Microsoft Edge, Other Browsers May Contain Bugs</p>
   </footer>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="src/scripts/app.js"></script>
 </body>
 </html>

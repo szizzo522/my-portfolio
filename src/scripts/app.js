@@ -81,7 +81,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const targetId = anchor.getAttribute("href").substring(1);
       const targetSection = document.getElementById(targetId);
       if (targetSection) {
-        const offset = -128;
+        let offset = -40; // default offset
+        if (targetId === "contact") {
+          offset = -120; // custom offset for contact section (move further down)
+        }
+        if (targetId === "portfolio") {
+          offset = -155; // custom offset for portfolio section
+        }
         const topPosition = targetSection.getBoundingClientRect().top + window.scrollY + offset;
         window.scrollTo({ top: topPosition, behavior: "smooth" });
       }
@@ -91,13 +97,54 @@ document.addEventListener("DOMContentLoaded", () => {
   // EmailJS form submission
   const contactForm = document.getElementById("contact-form");
   if (contactForm) {
-    emailjs.init("sXjJ9pc_xVmMkzVYv"); // Initialize EmailJS with user ID
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+
+    // Set hidden fields
+    fetch('https://ipapi.co/json/')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('user-ip').value = data.ip || '';
+        document.getElementById('user-city').value = data.city || '';
+        document.getElementById('user-region').value = data.region || '';
+        document.getElementById('user-country').value = data.country_name || '';
+        submitBtn.disabled = false;
+      });
+
+    document.getElementById('user-browser').value = navigator.userAgent;
+    document.getElementById('user-os').value = navigator.platform;
+    document.getElementById('user-language').value = navigator.language;
+    document.getElementById('user-screen').value = `${window.screen.width}x${window.screen.height}`;
+    document.getElementById('user-referrer').value = document.referrer || 'Direct';
+
+    emailjs.init("sXjJ9pc_xVmMkzVYv");
     contactForm.addEventListener("submit", e => {
       e.preventDefault();
-      emailjs.sendForm("service_utz0ock", "YOUR_TEMPLATE_ID", contactForm)
+
+      // Clear previous error and reset color to red for errors
+      const recaptchaErrorDiv = document.getElementById('recaptcha-error');
+      recaptchaErrorDiv.textContent = "";
+      recaptchaErrorDiv.style.color = "#ff4d4f";
+      // Check if reCAPTCHA is completed
+      if (typeof grecaptcha === "undefined") {
+        recaptchaErrorDiv.textContent = "reCAPTCHA failed to load. Please refresh the page.";
+        return;
+      }
+      const recaptchaResponse = grecaptcha.getResponse();
+      if (!recaptchaResponse) {
+        recaptchaErrorDiv.textContent = "Please complete the CAPTCHA.";
+        return;
+      }
+
+      // Send main message to you
+      emailjs.sendForm("service_ktmlvsa", "template_aot4jol", contactForm)
         .then(() => {
-          alert("Message sent successfully!");
+          // Send auto-reply to user
+          emailjs.sendForm("service_ktmlvsa", "template_yo04b2i", contactForm);
+          recaptchaErrorDiv.textContent = "Message sent successfully!";
+          recaptchaErrorDiv.style.color = "#4BB543"; // green
           contactForm.reset();
+          grecaptcha.reset();
         })
         .catch(error => {
           console.error("Error sending message:", error);
@@ -106,62 +153,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Tab switching functionality for the "About Me" section
-  const tabs = document.querySelectorAll(".tab");
-  const tabPanes = document.querySelectorAll(".tab-pane");
+  // Tab switching functionality for the "About Me" section (merge both tab logics)
+  const allTabs = document.querySelectorAll(".tab, .about-navigation .tab");
+  const allTabPanes = document.querySelectorAll(".tab-pane, .about-navigation .tab-pane");
 
-  function switchTab(tabId) {
-    // Ensure a valid tabId is provided
-    if (!tabId) return;
-
-    // Hide all tab panes and remove active class from tabs
-    tabPanes.forEach(pane => pane.classList.remove("active"));
-    tabs.forEach(tab => tab.classList.remove("active"));
-
-    // Show the selected tab pane and add active class to the corresponding tab
-    const selectedPane = document.getElementById(tabId);
-    const selectedTab = document.querySelector(`[data-tab="${tabId}"]`);
-
-    if (selectedPane) {
-      selectedPane.classList.add("active");
-    }
-    if (selectedTab) {
-      selectedTab.classList.add("active");
-    }
-  }
-
-  // Add click event listeners to all tabs
-  tabs.forEach(tab => {
+  allTabs.forEach(tab => {
     tab.addEventListener("click", () => {
-      const tabId = tab.getAttribute("data-tab");
-      switchTab(tabId);
-    });
-  });
-
-  // Ensure the first tab is active by default
-  if (tabs.length > 0 && tabPanes.length > 0) {
-    const firstTabId = tabs[0].getAttribute("data-tab");
-    switchTab(firstTabId);
-  }
-});
-
-// Tab switching logic for the "About Me" section
-document.addEventListener("DOMContentLoaded", () => {
-  const tabs = document.querySelectorAll(".about-navigation .tab");
-  const tabPanes = document.querySelectorAll(".about-navigation .tab-pane");
-
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      // Remove 'active' class from all tabs and tab panes
-      tabs.forEach((t) => t.classList.remove("active"));
-      tabPanes.forEach((pane) => pane.classList.remove("active"));
-
-      // Add 'active' class to the clicked tab and corresponding tab pane
+      allTabs.forEach(t => t.classList.remove("active"));
+      allTabPanes.forEach(pane => pane.classList.remove("active"));
       tab.classList.add("active");
-      const targetPane = document.getElementById(tab.dataset.tab);
+      const tabId = tab.getAttribute("data-tab");
+      const targetPane = document.getElementById(tabId);
       if (targetPane) {
         targetPane.classList.add("active");
       }
     });
   });
+
+  // Optionally, activate the first tab by default
+  if (allTabs.length > 0 && allTabPanes.length > 0) {
+    const firstTabId = allTabs[0].getAttribute("data-tab");
+    const firstPane = document.getElementById(firstTabId);
+    allTabs[0].classList.add("active");
+    if (firstPane) firstPane.classList.add("active");
+  }
 });
