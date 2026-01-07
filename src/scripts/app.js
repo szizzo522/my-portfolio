@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Typing effect for dynamic text in the hero section
-  const words = ["Applied/Data Scientist", "Cybersecurity Specialist", "Software Engineer", "Full-Stack Developer"];
+  const words = ["Threat Hunter", "Cybersecurity Analyst", "Content Developer", "Security Engineer"];
   const changingWords = document.getElementById("changing-words");
   let wordIndex = 0, charIndex = 0, isDeleting = false;
 
