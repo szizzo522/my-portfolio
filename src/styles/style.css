@@ -256,6 +256,7 @@ section {
   margin-right: 1.5rem; /* Add space between the text and the box */
 }
 
+/* Right-side panel container */
 .about-navigation {
   flex: 1.8; /* Make the box take up more space */
   background: #f9f9f9;
@@ -269,6 +270,13 @@ section {
   margin-top: 7rem; /* Add margin to move the box down the page */
 }
 
+/* ✅ FIX: make all text inside the right panel dark so it shows on white background */
+.about-navigation,
+.about-navigation * {
+  color: #111;
+}
+
+/* Tabs row */
 .nav-tabs {
   display: flex;
   justify-content: space-between; /* Spread tabs evenly */
@@ -287,7 +295,7 @@ section {
   flex: 1;
   padding: 0.75rem; /* Add padding for larger tabs */
   background: #e53935; /* Red background for each tab */
-  color: #fff;
+  color: #fff; /* keep tab text white */
   border: none; /* Remove the border */
   border-radius: 0; /* Remove rounding for sharp edges */
   cursor: pointer;
@@ -305,6 +313,15 @@ section {
   background: #b71c1c; /* Darker red for the active tab */
 }
 
+/* Tab Content box */
+.tab-content {
+  padding: 2rem; /* Keep consistent padding for the content area */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0 0 8px 8px; /* Match the box's rounded corners */
+  margin-top: 3rem; /* Add space below the tabs */
+}
+
 /* Tab Pane Styling */
 .tab-pane {
   display: none; /* Hide all tab panes by default */
@@ -317,23 +334,11 @@ section {
   opacity: 1; /* Make the active pane fully visible */
 }
 
-.tab-content {
-  padding: 2rem; /* Keep consistent padding for the content area */
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 0 0 8px 8px; /* Match the box's rounded corners */
-  margin-top: 3rem; /* Add space below the tabs */
-}
-
-.tab-pane {
-  display: none; /* Hide all tab panes by default */
-  opacity: 0; /* Ensure hidden panes are not visible */
-  transition: opacity 0.3s ease; /* Smooth transition for visibility */
-}
-
-.tab-pane.active {
-  display: block; /* Show only the active tab pane */
-  opacity: 1; /* Make the active pane fully visible */
+/* Make HR lines visible on white */
+.about-navigation hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
 }
 
 /* Portfolio Section */
@@ -355,12 +360,12 @@ section {
   display: none; /* Hide the container since videos are removed */
 }
 
-/* Ensure enough space between Portfolio and Contact sections */
+/* ✅ Make contact section match your theme (your old CSS had #contact light gray and it conflicts) */
 #contact {
-  background-color: #f4f4f4; /* Light gray background */
-  color: #000; /* Dark text for contrast */
-  margin-top: 10rem; /* Reduce the space above the Contact section */
-  padding: 4rem 2rem; /* Keep padding for the Contact section */
+  background-color: #1a0f0f;
+  color: #fff;
+  margin-top: 10rem;
+  padding: 4rem 2rem;
 }
 
 /* Contact Section */
@@ -373,7 +378,7 @@ section {
 .contact-section h2 {
   margin-bottom: 2rem;
   font-size: 2rem;
-  color: #fff;
+  color: #fff; /* ✅ keep it white */
 }
 
 /* Contact Section Container */
@@ -775,68 +780,6 @@ footer {
   background-color: #1a0f0f; /* Super dark red background */
   height: 2rem; /* Adjust height as needed */
   width: 100%; /* Full width */
-}
-
-/* Contact Section */
-.contact-section {
-  background-color: #1a0f0f; /* Super dark red background */
-  color: #fff; /* White text for contrast */
-  padding: 4rem 2rem; /* Maintain padding for spacing */
-}
-
-.contact-section h2 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  color: #333;
-}
-
-#contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-  margin-bottom: 1rem;
-  text-align: left;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-.form-group textarea {
-  resize: vertical;
-  height: 100px;
-}
-
-button[type="submit"] {
-  background-color: #e53935;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-  background-color: #d32f2f;
 }
 
 /* Education List */
