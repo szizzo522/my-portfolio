@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="src/styles/style.css">
   <link rel="icon" href="src/assets/sz.png" type="image/png"> <!-- Added favicon -->
 </head>
+
 <body>
   <header>
     <img src="src/assets/sam.png" alt="Sam Logo" class="logo">
@@ -32,10 +34,10 @@
             <img src="src/assets/youtube-icon.svg" alt="YouTube">
           </a>
           <a href="https://www.linkedin.com/in/samzizzo/" class="btn linkedin" target="_blank">
-            <img src="src/assets/linkedin-icon.svg" alt="LinkedIn"> 
+            <img src="src/assets/linkedin-icon.svg" alt="LinkedIn">
           </a>
           <a href="https://github.com/szizzo522" class="btn github" target="_blank">
-            <img src="src/assets/github-icon.svg" alt="GitHub"> 
+            <img src="src/assets/github-icon.svg" alt="GitHub">
           </a>
           <a href="src/assets/Samuel_Zizzo Resume (2).pdf" class="btn resume">Download Resume</a>
         </div>
@@ -71,6 +73,13 @@
           <a href="https://en.wikipedia.org/wiki/IBM" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="cert-logo">
           </a>
+          <a href="https://www.comptia.org/" target="_blank" rel="noopener">
+            <img src="src/assets/comptia.png" alt="CompTIA" class="cert-logo">
+          </a>
+          <a href="https://www.cisco.com/" target="_blank" rel="noopener">
+            <img src="src/assets/cisco.png" alt="Cisco" class="cert-logo">
+          </a>
+          </a>
         </div>
       </section>
     </section>
@@ -79,10 +88,38 @@
       <div class="about-container">
         <div class="about-text">
           <h2>About Me</h2>
-          <p>Hi, I’m Sam, a Computer Science student at FGCU with a passion for cybersecurity. I specialize in developing secure systems and applications to protect against evolving cyber threats.</p>
-          <p>Currently, I’m honing my skills in Python, ethical hacking, and cloud security while tackling various real-world security challenges through personal projects. I’m eager to continue growing in my field and aspire to contribute to building more secure online ecosystems as a cybersecurity consultant.</p>
-          <p>Outside of coding, I enjoy staying active, reading tech blogs, and exploring new innovations in the world of AI and security. My goal is to use my skills to make a positive impact on both businesses and individuals by enhancing online safety and privacy.</p>
-          <p>Feel free to browse through my portfolio and contact me if you’re interested in collaborating on exciting tech projects or have any questions.</p>
+
+          <!-- Only this area scrolls -->
+          <div class="about-scroll">
+            <p><strong>Results-driven Computer Science student</strong> specializing in cybersecurity, threat detection,
+              and secure systems engineering, with industry-recognized certifications including CompTIA Security+,
+              CySA+, Network+, A+, along with IBM and Cisco credentials.</p>
+
+            <p>I bring a blend of technical depth and real-world operational experience. I have designed, built, and
+              tested secure environments, encrypted applications, and cyber-range labs to simulate real attack and
+              defense scenarios using tools such as Kali Linux, Metasploit, Nmap, and AWS IAM, with a focus on secure
+              access controls and incident response workflows. My hands-on projects include a cryptographically
+              protected password vault, a real-time malware and file-risk scanner, and a home security lab used to
+              practice detection, exploitation, and remediation techniques.</p>
+
+            <p>In professional roles at Advance Auto Parts and AutoZone, I supported enterprise systems during multiple
+              cloud and platform outages, helping sustain operations when critical services were unavailable. I worked
+              with Okta-based identity systems, multi-factor authentication, POS platforms, and cloud-hosted services,
+              gaining first-hand exposure to how availability, access control, and data integrity issues impact real
+              business operations. These experiences strengthened my ability to troubleshoot under pressure, document
+              incidents, and communicate technical issues clearly—core skills in SOC and incident response environments.
+            </p>
+
+            <p>Beyond technology, I am an Eagle Scout, having led and executed a community leadership project that
+              raised over $1,500, coordinated volunteers, and delivered custom-built equipment to support a
+              shelter-to-service dog program. This experience reinforced my leadership, accountability, and project
+              execution skills—qualities I bring into every technical role.</p>
+
+            <p>I combine cybersecurity expertise, business awareness, and proven leadership to help organizations
+              protect sensitive data, maintain compliance, and remain resilient during security incidents. I am actively
+              seeking opportunities in cybersecurity, healthcare technology security, and threat analysis where I can
+              contribute from day one.</p>
+          </div>
         </div>
         <div class="about-navigation">
           <div class="nav-tabs">
@@ -95,23 +132,42 @@
             <div id="skills" class="tab-pane active">
               <ul class="skills-list">
                 <li>
-                  <strong>Programming Languages:</strong><br>
-                  Experience with Python, Java, C++, HTML, and CSS
+                  <strong>Cybersecurity & Defense:</strong><br>
+                  Threat detection, incident triage, SOC fundamentals, log analysis, endpoint/network fundamentals,
+                  secure access controls
                 </li>
                 <hr>
+
                 <li>
-                  <strong>Cybersecurity Knowledge:</strong><br>
-                  Understanding of basic network protocols and cybersecurity procedures, including fundamental principles of system, web application security and cybersecurity best practices
+                  <strong>Tools (Hands-On):</strong><br>
+                  Wireshark, Nmap, Metasploit, Burp Suite, Kali Linux, VMware/VirtualBox, Git/GitHub
                 </li>
                 <hr>
+
                 <li>
-                  <strong>Tools & Platforms:</strong><br>
-                  Hands-on experience setting up virtual machines, working in Linux environments, and performing basic penetration testing using tools like Wireshark, Metasploit, and Burp Suite. Also familiar with game development engines like Unitty and Unreal engine.
+                  <strong>Cloud & Identity:</strong><br>
+                  AWS IAM (roles/policies), basic cloud security concepts, MFA, Okta/IAM workflows, troubleshooting
+                  cloud-hosted services
                 </li>
                 <hr>
+
                 <li>
-                  <strong>Soft Skills:</strong><br>
-                  Strong analytical thinking, effective problem-solving, collaborative team player, and clear, professional communication
+                  <strong>Programming & Web:</strong><br>
+                  Python (automation + GUIs), Java, C++, HTML/CSS, JavaScript basics
+                </li>
+                <hr>
+
+                <li>
+                  <strong>Projects & Systems:</strong><br>
+                  Encrypted password vault, real-time file risk scanner, home cyber lab (vulnerable VMs, isolated
+                  networks), secure local storage
+                </li>
+                <hr>
+
+                <li>
+                  <strong>Professional Strengths:</strong><br>
+                  Troubleshooting under pressure, clear documentation, customer-facing communication, teamwork, process
+                  improvement
                 </li>
               </ul>
             </div>
@@ -120,74 +176,186 @@
                 <li>
                   <strong>Florida Gulf Coast University (FGCU)</strong><br>
                   U.A. Whitaker College of Engineering<br>
-                  B.S. in Computer Science<br>
+                  B.S. Computer Science (Cybersecurity Focus)<br>
                   <em>2024 – 2028</em><br>
-                  GPA: 4.0
+                  GPA: 4.0<br>
+                  Clubs: CS & Software Engineering Club (CSSEC), Forensics Club
                 </li>
                 <hr>
+
                 <li>
                   <strong>Palm Beach State College</strong><br>
-                  Dual Enrollment – Mathematics & Programming<br>
-                  <em>2024 – 2028</em><br>
-                  GPA: 4.0
+                  Dual Enrollment / Coursework – Math & Programming<br>
+                  <em>2020 – 2024</em><br>
+                  Focus: Algebra → Pre-Calc foundation, programming fundamentals
                 </li>
                 <hr>
+
                 <li>
                   <strong>Jupiter Community High School</strong><br>
                   High School Diploma<br>
-                  <em>2020 – 2024</em>
+                  <em>2020 – 2024</em><br>
+                  Activities: Horticulture Club, volunteering & community service
                 </li>
               </ul>
             </div>
             <div id="experience" class="tab-pane">
               <ul class="experience-list">
+
                 <li>
-                  <strong>3 years of experience in sales + operating POS systems and internal tools</strong><br>
-                  Utilizing backend APIs to manage inventory and support daily operations.
+                  <strong>Help Desk Technician</strong><br>
+                  AutoZone · Fort Myers, FL<br>
+                  <em>Jan 2025 – Jul 2025</em><br>
+                  Responded to cloud-based system outages by identifying impacted services, supporting manual workflows,
+                  and maintaining data integrity during downtime.
+                  Supported enterprise identity and access management using Okta and multi-factor authentication, and
+                  assisted with troubleshooting and documenting internal system issues using proprietary IT and store
+                  operations tools.
                 </li>
                 <hr>
+
                 <li>
-                  <strong>5 years of experience in Hospitality and Customer Service</strong><br>
-                  Building strong communication, teamwork, and problem-solving skills in fast-paced environments.
+                  <strong>Help Desk Technician</strong><br>
+                  Advance Auto Parts · Jupiter, FL<br>
+                  <em>Jan 2021 – Dec 2024</em><br>
+                  Provided technical support for POS, inventory, and cloud-hosted retail systems across daily
+                  operations.
+                  Supported Okta-based authentication and secure access to internal platforms.
+                  Gained firsthand experience during a major third-party cloud incident, observing how outages and
+                  data-integrity risks affect business continuity and incident response.
                 </li>
+                <hr>
+
+                <li>
+                  <strong>Inventory Management & Marketing Coordinator</strong><br>
+                  Advance Auto Parts · Jupiter, FL<br>
+                  <em>Feb 2021 – 2024</em><br>
+                  Monitored and audited inventory across multiple product lines, identifying discrepancies and potential
+                  loss using POS and digital tracking systems.
+                  Maintained detailed digital and physical records to support operational accuracy and compliance.
+                </li>
+                <hr>
+
+                <li>
+                  <strong>Marketing & Promotions / Certified Technician</strong><br>
+                  Valvoline Inc. · Jupiter, FL<br>
+                  <em>Jan 2024 – Dec 2024</em><br>
+                  Represented the brand at public and on-site events, adapting promotional strategies based on real-time
+                  customer engagement.
+                  Supported digital marketing efforts and gained experience translating technical service offerings into
+                  clear, customer-facing communication.
+                </li>
+                <hr>
+
+                <li>
+                  <strong>Digital Content & Operations Roles</strong><br>
+                  Spotos Oyster Bar · Three Oaks Hospitality · Vinny’s<br>
+                  <em>2019 – 2023</em><br>
+                  Managed website content, digital assets, and online ordering systems.
+                  Uploaded media, tracked content updates, and supported digital workflows using POS systems and
+                  internal communication tools.
+                </li>
+                <hr>
+
+                <li>
+                  <strong>Media & Guest Experience Internship</strong><br>
+                  Red Reflet Ranch · Ten Sleep, WY<br>
+                  <em>2011 – 2015</em><br>
+                  Assisted with media production, guest operations, and brand collaborations.
+                  Supported photography, video shoots, logistics coordination, and on-site technical setups for
+                  promotional content with high-profile visitors and partner brands.
+                </li>
+
               </ul>
             </div>
             <div id="badges" class="tab-pane">
               <ul class="badges-list">
+
                 <li>
-                  <strong>Cloud For the Enterprise – IBM</strong><br>
-                  Understanding cloud solutions for enterprise-level applications.
+                  <strong>CompTIA Security+</strong><br>
+                  Foundational cybersecurity certification covering network security, risk management, incident
+                  response, and secure system design.
                 </li>
                 <hr>
+
                 <li>
-                  <strong>Enterprise Data Science – IBM</strong><br>
-                  Proficiency in data science techniques and enterprise applications.
+                  <strong>CompTIA CySA+</strong><br>
+                  Focused on threat detection, security monitoring, log analysis, and incident response within
+                  enterprise environments.
                 </li>
                 <hr>
+
                 <li>
-                  <strong>Enterprise Grade AI – IBM</strong><br>
-                  Expertise in building AI solutions for enterprise-grade systems.
+                  <strong>CompTIA Network+</strong><br>
+                  Validates knowledge of networking concepts, infrastructure, troubleshooting, and secure network
+                  operations.
                 </li>
                 <hr>
+
                 <li>
-                  <strong>Adobe Certified Professional - (Creative Cloud 2021)</strong><br>
-                  Skilled in advanced photo editing and graphic design.
+                  <strong>CompTIA A+</strong><br>
+                  Covers core IT fundamentals including hardware, operating systems, troubleshooting, and endpoint
+                  security.
                 </li>
                 <hr>
+
                 <li>
-                  <strong>Microsoft Office Specialist - (Office 2016)</strong><br>
-                  Certified expertise in Microsoft Word for document creation.
+                  <strong>Certified Ethical Hacker (CEH)</strong><br>
+                  Cisco Networking Academy<br>
+                  Training in ethical hacking methodologies, attack vectors, and defensive countermeasures.
                 </li>
                 <hr>
+
                 <li>
-                  <strong>CIW: Internet and Business</strong><br>
-                  Knowledge of internet technologies and business applications.
+                  <strong>Data Science Essentials with Python</strong><br>
+                  Cisco Networking Academy<br>
+                  Applied Python programming for data analysis, visualization, and basic machine learning workflows.
                 </li>
                 <hr>
+
                 <li>
-                  <strong>CIW: Website Development</strong><br>
-                  Proficient in website development and design principles.
+                  <strong>Threat Intelligence and Hunting</strong><br>
+                  IBM<br>
+                  Focused on adversary behavior, threat analysis, and proactive threat hunting techniques.
                 </li>
+                <hr>
+
+                <li>
+                  <strong>Cloud for the Enterprise</strong><br>
+                  IBM<br>
+                  Enterprise cloud fundamentals including IAM, access controls, scalability, and cloud security
+                  concepts.
+                </li>
+                <hr>
+
+                <li>
+                  <strong>Enterprise Data Science</strong><br>
+                  IBM<br>
+                  Applied data science techniques for business and security use cases, including data modeling and
+                  analysis.
+                </li>
+                <hr>
+
+                <li>
+                  <strong>Enterprise Grade AI</strong><br>
+                  IBM<br>
+                  Understanding AI systems at scale, ethical considerations, and enterprise deployment strategies.
+                </li>
+                <hr>
+
+                <li>
+                  <strong>Adobe Certified Professional</strong><br>
+                  Creative Cloud (Photoshop)<br>
+                  Certified proficiency in digital design, image editing, and creative workflows.
+                </li>
+                <hr>
+
+                <li>
+                  <strong>Microsoft Office Specialist</strong><br>
+                  Microsoft Word<br>
+                  Demonstrated expertise in professional documentation and business communication tools.
+                </li>
+
               </ul>
             </div>
           </div>
@@ -213,7 +381,7 @@
 
         <!-- Second Button with Text Overlay -->
         <div class="button-item">
-          <a href="https://www.youtube.com/@Zshellie" target="_blank">
+          <a href="https://www.youtube.com/@ZRF_Labs" target="_blank">
             <div class="image-overlay">
               <img src="src/assets/media.jpg" alt="Media Creation">
               <div class="overlay-text">
@@ -245,19 +413,25 @@
         <!-- Left Side: Text -->
         <div class="contact-text">
           <p>
-            I am highly motivated to expand my technical skills and gain hands-on experience in a dynamic, real-world environment. 
-            I’m eager to contribute to a collaborative team where I can apply my knowledge and grow through meaningful projects. 
-            With a solid foundation in multiple programming languages and technologies, I thrive in agile environments that value 
-            innovation and continuous learning. I’m committed to delivering high-quality results and bring value to forward-thinking 
-            organizations. Please don’t hesitate to reach out with any questions or opportunities—I’m excited to connect and make a meaningful impact.
+            I am highly motivated to expand my technical skills and gain hands-on experience in a dynamic, real-world
+            environment.
+            I’m eager to contribute to a collaborative team where I can apply my knowledge and grow through meaningful
+            projects.
+            With a solid foundation in multiple programming languages and technologies, I thrive in agile environments
+            that value
+            innovation and continuous learning. I’m committed to delivering high-quality results and bring value to
+            forward-thinking
+            organizations. Please don’t hesitate to reach out with any questions or opportunities—I’m excited to connect
+            and make a meaningful impact.
           </p>
           <p>
-            <div style="background-color: #000; padding: 1rem; border-radius: 8px; display: inline-block;">
-              <a href="https://www.linkedin.com/in/samzizzo/" target="_blank" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;">
-                <img src="src/assets/linkedin-icon.svg" alt="LinkedIn" style="width: 24px; height: 24px;">
-                <strong>Connect with me on LinkedIn</strong>
-              </a>
-            </div>
+          <div style="background-color: #000; padding: 1rem; border-radius: 8px; display: inline-block;">
+            <a href="https://www.linkedin.com/in/samzizzo/" target="_blank"
+              style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;">
+              <img src="src/assets/linkedin-icon.svg" alt="LinkedIn" style="width: 24px; height: 24px;">
+              <strong>Connect with me on LinkedIn</strong>
+            </a>
+          </div>
           </p>
         </div>
         <!-- Right Side: Contact Form -->
@@ -286,7 +460,8 @@
           <input type="hidden" name="user_referrer" id="user-referrer">
           <!-- Move reCAPTCHA here, between message and submit button -->
           <div class="g-recaptcha" data-sitekey="6LfuGFwrAAAAAPcruMvd1yBlw82YqXPwgeKRwVlK"></div>
-          <div id="recaptcha-error" class="form-error" style="color: #ff4d4f; margin-top: 6px; font-size: 0.95em;"></div>
+          <div id="recaptcha-error" class="form-error" style="color: #ff4d4f; margin-top: 6px; font-size: 0.95em;">
+          </div>
           <button type="submit">Send Message</button>
         </form>
       </div>
@@ -295,10 +470,12 @@
   </main>
   <footer>
     <p>&copy; 2025 Sam's Portfolio</p>
-    <p>Copyright © 2025 - Samuel Portfolio - All Rights Reserved - Best Experienced on Microsoft Edge, Other Browsers May Contain Bugs</p>
+    <p>Copyright © 2025 - Samuel Portfolio - All Rights Reserved - Best Experienced on Microsoft Edge, Other Browsers
+      May Contain Bugs</p>
   </footer>
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="src/scripts/app.js"></script>
 </body>
+
 </html>

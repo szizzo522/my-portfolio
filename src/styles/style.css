@@ -270,12 +270,20 @@ section {
   margin-top: 7rem; /* Add margin to move the box down the page */
 }
 
-/* ✅ FIX: make all text inside the right panel dark so it shows on white background */
-.about-navigation,
-.about-navigation * {
-  color: #111;
+/* Right-side panel container (BLACK) */
+.about-navigation {
+  flex: 1.8;
+  background: #000;                 /* ✅ black panel */
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 2rem;                    /* cleaner padding */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
+  max-width: 700px;
+  position: relative;
+  transform: translateX(30px);
+  margin-top: 7rem;
+  color: #fff;                      /* ✅ default text white */
 }
-
 /* Tabs row */
 .nav-tabs {
   display: flex;
@@ -760,20 +768,30 @@ footer {
   align-items: center; /* Align logos vertically */
 }
 
-.cert-logo {
-  filter: brightness(0) invert(1); /* Make the images white */
-  background-color: transparent; /* Ensure no background color */
-  display: inline-block; /* Ensure proper alignment */
-  height: 40px; /* Adjust logo size */
-  width: auto; /* Maintain aspect ratio */
-  margin: 0 10px; /* Add spacing between logos */
-  transition: transform 0.3s ease, filter 0.3s ease; /* Add hover effect */
+/* Make each logo sit on a black badge */
+.certifications-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.cert-logo:hover {
-  transform: scale(1.1); /* Slightly enlarge the logo on hover */
-  filter: brightness(0.8) invert(1); /* Slightly dim the white on hover */
+.certifications-container a:hover {
+  background: #111;
+  transform: scale(1.08);
 }
+
+/* Logo sizing */
+.cert-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+  margin: 0;            /* IMPORTANT: remove the old margin here */
+}
+
 
 /* Black Bars Above Sections */
 .black-bar {
@@ -1033,4 +1051,17 @@ footer {
 
 .g-recaptcha {
   margin-bottom: 20px; /* Adjust the value as needed */
+}
+.tab-content {
+  background: #111;
+  border-color: #333;
+}
+
+.tab-content,
+.tab-content * {
+  color: #fff;
+}
+
+.about-navigation hr {
+  border-top: 1px solid rgba(255,255,255,0.2);
 }
